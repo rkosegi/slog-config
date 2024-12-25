@@ -17,6 +17,7 @@ limitations under the License.
 package xlog
 
 import (
+	"flag"
 	"log/slog"
 
 	"github.com/prometheus/common/promslog"
@@ -32,6 +33,11 @@ const (
 type SlogConfig struct {
 	Level  Level
 	Format Format
+}
+
+func (sc *SlogConfig) AddFlags(fs *flag.FlagSet) {
+	fs.Var(&sc.Level, sc.Level.Type(), "Log level")
+	fs.Var(&sc.Format, sc.Format.Type(), "Log format")
 }
 
 func (sc *SlogConfig) ToPromslogConfig() *promslog.Config {
