@@ -42,8 +42,8 @@ func (sc *SlogConfig) AddFlags(fs *flag.FlagSet) {
 
 func (sc *SlogConfig) ToPromslogConfig() *promslog.Config {
 	return &promslog.Config{
-		Level:  &sc.Level.AllowedLevel,
-		Format: &sc.Format.AllowedFormat,
+		Level:  &sc.Level.Level,
+		Format: &sc.Format.Format,
 		Style:  promslog.GoKitStyle,
 	}
 }
@@ -73,7 +73,7 @@ func New(level string, format LogFormat) (*SlogConfig, error) {
 }
 
 type Level struct {
-	promslog.AllowedLevel
+	promslog.Level
 }
 
 func (l Level) Type() string {
@@ -81,7 +81,7 @@ func (l Level) Type() string {
 }
 
 type Format struct {
-	promslog.AllowedFormat
+	promslog.Format
 }
 
 func (Y Format) Type() string {
