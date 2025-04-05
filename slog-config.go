@@ -63,6 +63,8 @@ func MustNew(level string, format LogFormat) *SlogConfig {
 func New(level string, format LogFormat) (*SlogConfig, error) {
 	var err error
 	sc := &SlogConfig{}
+	sc.Format.Format = *promslog.NewFormat()
+	sc.Level.Level = *promslog.NewLevel()
 	if err = sc.Format.Set(string(format)); err != nil {
 		return nil, err
 	}
