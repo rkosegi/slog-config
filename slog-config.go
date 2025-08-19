@@ -21,6 +21,7 @@ import (
 	"log/slog"
 
 	"github.com/prometheus/common/promslog"
+	"github.com/spf13/pflag"
 )
 
 type LogFormat string
@@ -36,6 +37,11 @@ type SlogConfig struct {
 }
 
 func (sc *SlogConfig) AddFlags(fs *flag.FlagSet) {
+	fs.Var(&sc.Level, sc.Level.Type(), "Log level")
+	fs.Var(&sc.Format, sc.Format.Type(), "Log format")
+}
+
+func (sc *SlogConfig) AddPFlags(fs *pflag.FlagSet) {
 	fs.Var(&sc.Level, sc.Level.Type(), "Log level")
 	fs.Var(&sc.Format, sc.Format.Type(), "Log format")
 }
