@@ -18,5 +18,5 @@ go 1.24.2
 
 require (
 	github.com/prometheus/common v0.65.0
-	github.com/spf13/pflag v1.0.6
+	github.com/spf13/pflag v1.0.7
 )
