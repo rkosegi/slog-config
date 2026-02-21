@@ -14,7 +14,7 @@
 
 module github.com/rkosegi/slog-config
 
-go 1.24.2
+go 1.26
 
 require (
 	github.com/prometheus/common v0.67.5
