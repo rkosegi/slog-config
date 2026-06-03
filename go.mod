@@ -17,6 +17,6 @@ module github.com/rkosegi/slog-config
 go 1.26
 
 require (
-	github.com/prometheus/common v0.68.0
+	github.com/prometheus/common v0.68.1
 	github.com/spf13/pflag v1.0.10
 )
