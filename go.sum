@@ -1,5 +1,5 @@
-github.com/prometheus/common v0.72.0 h1:tAYsE+sPJxIncDAobm4H5aQjmox9ZxEIIqPbiffa8G4=
-github.com/prometheus/common v0.72.0/go.mod h1:77NWqAQ2tXT7BIK40qjJdw5Acrsrg1TlHAnsQi3i6mk=
+github.com/prometheus/common v0.72.1 h1:ZAiQed/nk8IIcsdzb2TlJu23NEUDyDLQ9TXTN2WRK6Y=
+github.com/prometheus/common v0.72.1/go.mod h1:1IoBY4IRaJnhs2ESjNzjilP1cJ/P8pimGoomq7zRXrA=
 github.com/spf13/pflag v1.0.10 h1:4EBh2KAYBwaONj6b2Ye1GiHfwjqyROoF4RwYO+vPwFk=
 github.com/spf13/pflag v1.0.10/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
 github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
