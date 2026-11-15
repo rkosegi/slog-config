@@ -13,34 +13,22 @@
 # limitations under the License.
 ---
 name: CI
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Go
-        uses: actions/setup-go@v7
-        with:
-          go-version: '1.27'
-
-      - name: Check out code
-        uses: actions/checkout@v7
-
-      - uses: actions/setup-python@v7
-      - uses: pre-commit/action@v3.0.1
-
-      - name: Build
-        run: go build -v ./...
-
-      - name: Test
-        run: go test -v ./...
+  ci:
+    uses: rkosegi/github-workflows/.github/workflows/go-ci.yaml@6b051e22fcf9056ff77e553d6307a6d9b361b438 # v0.0.7
